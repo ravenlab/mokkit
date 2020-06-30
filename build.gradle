@@ -1,0 +1,54 @@
+
+plugins {
+	id 'java'
+	id 'com.github.johnrengelman.shadow' version '5.0.0'
+	id 'jacoco'
+	id 'eclipse'
+	id 'idea'
+}
+
+
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
+
+group = 'com.github.ravenlab'
+version = '0.4.0'
+
+repositories {
+    mavenCentral()
+    jcenter()
+    maven { url "https://hub.spigotmc.org/nexus/content/repositories/snapshots" }
+    maven { url = "https://oss.sonatype.org/content/repositories/snapshots" }
+}
+
+shadowJar {
+   baseName = 'mokkit'
+   classifier = null
+}
+
+
+dependencies {
+    testImplementation 'junit:junit:4.12'
+    testImplementation 'org.mockito:mockito-core:3.3.3'
+    compileOnly 'org.mockito:mockito-core:3.3.3'
+    testImplementation 'org.spigotmc:spigot-api:1.12.2-R0.1-SNAPSHOT'
+    compileOnly 'org.spigotmc:spigot-api:1.12.2-R0.1-SNAPSHOT'
+}
+
+jacocoTestReport {
+	reports {
+		xml.enabled true
+		html.enabled false
+		html.destination file("${buildDir}/jacocoHtml")
+	}
+}
+
+task javadocJar(type: Jar, dependsOn: javadoc) {
+    classifier = 'javadoc'
+    from javadoc.destinationDir
+}
+
+artifacts {
+	 archives javadocJar
+}
