@@ -1,4 +1,4 @@
-package com.github.ravenlab.mokkit;
+package com.github.ravenlab.mokkit.plugin;
 
 import org.bukkit.plugin.Plugin;
 

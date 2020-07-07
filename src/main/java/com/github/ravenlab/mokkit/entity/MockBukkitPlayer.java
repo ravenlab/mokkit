@@ -1,4 +1,4 @@
-package com.github.ravenlab.mokkit;
+package com.github.ravenlab.mokkit.entity;
 
 import java.util.ArrayList;
 import java.util.Collections;

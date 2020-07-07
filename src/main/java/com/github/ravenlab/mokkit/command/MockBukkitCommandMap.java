@@ -1,4 +1,4 @@
-package com.github.ravenlab.mokkit;
+package com.github.ravenlab.mokkit.command;
 
 import org.bukkit.command.CommandMap;
 

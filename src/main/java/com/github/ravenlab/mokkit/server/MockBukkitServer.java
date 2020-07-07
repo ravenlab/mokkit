@@ -1,4 +1,4 @@
-package com.github.ravenlab.mokkit;
+package com.github.ravenlab.mokkit.server;
 
 import java.util.HashMap;
 import java.util.Map;

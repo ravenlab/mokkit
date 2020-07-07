@@ -4,6 +4,13 @@ import java.util.UUID;
 
 import org.mockito.Mockito;
 
+import com.github.ravenlab.mokkit.command.MockBukkitCommandSender;
+import com.github.ravenlab.mokkit.command.MockNoCommandBukkitServer;
+import com.github.ravenlab.mokkit.entity.MockBukkitPlayer;
+import com.github.ravenlab.mokkit.plugin.MockBukkitPlugin;
+import com.github.ravenlab.mokkit.server.MockBukkitServer;
+import com.github.ravenlab.mokkit.world.MockBukkitWorld;
+
 public class BukkitMockFactory {
 
 	public MockBukkitServer createServer() {
